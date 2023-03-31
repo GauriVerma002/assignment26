@@ -1,0 +1,37 @@
+#include<iostream>
+  using namespace std;
+class Time{
+private:
+    int hrs,min,sec;
+public:
+    Time(int x, int y,int z)
+    {
+        hrs=x;
+        min=y;
+        sec=z;
+    }
+    void setTime(int x,int y,int z)
+    {
+        hrs=x;
+        min=y;
+        sec=z;
+    }
+    void showTime()
+    {
+        cout<<hrs<<":"<<min<<":"<<sec<<endl;
+    }
+    Time add(Time T){
+        Time temp(0,0,0);
+        temp.hrs= hrs+T.hrs;
+        temp.min= min+T.min;
+        temp.sec= sec+T.sec;
+        return temp;
+    }
+};
+int main()
+  {
+    Time T1(7,9,5),T2(6,5,9);   
+    T1.showTime();
+    T2.showTime();
+    cout<<endl;
+  }
